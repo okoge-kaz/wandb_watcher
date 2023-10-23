@@ -130,7 +130,7 @@ def main() -> None:
             print("LOG: updated")
             with open(f".wandb_watcher_cache/{run.id}/last_run", mode="a") as f:
                 f.write(f"{human_readable_timestamp}: {step} step\n")
-            send_slack_alert(alert_message=f"updated 🎉\n last iteration: {last_run_step}")
+            # send_slack_alert(alert_message=f"updated 🎉\n last iteration: {last_run_step}")
 
 
 if __name__ == "__main__":
