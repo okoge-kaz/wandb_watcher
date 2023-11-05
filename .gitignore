@@ -1,6 +1,6 @@
 .wandb_watcher_cache/
 .config
-cron_*
+cron_job.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
