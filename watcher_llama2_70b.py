@@ -87,7 +87,10 @@ def main() -> None:
     runs = get_current_runnings(entity=args.entity, project=args.project)
     if len(runs) == 0:
         raise ValueError("No running run found")
-    print(f"LOG: currently running: {runs[0].id}, {runs[1].id}, ...")
+    if len(runs) > 1:
+        print(f"LOG: currently running: {runs[0].id}, {runs[1].id}, ...")
+    else:
+        print(f"LOG: currently running: {runs[0].id}")
 
     # mkdir
     os.makedirs(name=".wandb_watcher_cache", exist_ok=True)
