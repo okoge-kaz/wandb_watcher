@@ -4,7 +4,7 @@ import time
 while True:
     try:
         # シェルスクリプトを実行
-        subprocess.run(["/Users/kazuki/Documents/TokyoTech/ylab/test/abci/wandb_watcher/cron_job.sh"], check=True)
+        subprocess.run(["./cron_job.sh"], check=True)
 
         # 10分待機
         time.sleep(600)
