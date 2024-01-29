@@ -11,11 +11,13 @@ while True:
     except subprocess.CalledProcessError as e:
         # シェルスクリプトの実行中にエラーが発生した場合、エラーメッセージを出力
         print(f"Error occurred: {e}")
-        break
+        time.sleep(60)
+
     except KeyboardInterrupt:
         # ユーザーがキーボードで中断した場合、ループを終了
         print("Interrupted by user. Exiting.")
         break
+
     except Exception as e:
         print(f"Error occurred: {e}")
         break
